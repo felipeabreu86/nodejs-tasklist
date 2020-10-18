@@ -1,0 +1,13 @@
+{
+  "name": "curso-tasklist",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.5",
+    "sucrase": "^3.16.0"
+  }
+}
