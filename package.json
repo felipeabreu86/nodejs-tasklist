@@ -1,7 +1,12 @@
 {
   "name": "curso-tasklist",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Api Tasklist - Curso Udemy",
+  "main": "./src/server.js",
+  "scripts": {
+    "dev": "nodemon ./src/server.js"
+  },
+  "author": "Felipe Abreu",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
