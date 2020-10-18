@@ -1,13 +1,14 @@
 import express from 'express';
 import cors from 'cors';
 import routes from './routes';
-import './database';
+import database from './database/index';
 
 class App {
   constructor() {
     this.server = express();
     this.middlewares();
     this.routes();
+    database.init();
   }
 
   middlewares() {
