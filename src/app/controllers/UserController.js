@@ -6,7 +6,7 @@ class UserController {
     const schema = Yup.object().shape({
       name: Yup.string().required(),
       email: Yup.string().email().required(),
-      password_hash: Yup.string().required(),
+      password: Yup.string().required(),
     });
 
     if (!(await schema.isValid(req.body))) {
@@ -20,7 +20,7 @@ class UserController {
     });
 
     if (userExists) {
-      return res.status(400).json({ error: 'Usuario já existe.' });
+      return res.status(400).json({ error: 'Usuário já existe.' });
     }
 
     const { id, name, email } = await User.create(req.body);
