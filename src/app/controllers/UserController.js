@@ -2,6 +2,11 @@ import * as Yup from 'yup';
 import User from '../models/User';
 
 class UserController {
+  async update(req, res) {
+    console.log(req.userId);
+    return res.json({ ok: true });
+  }
+
   async store(req, res) {
     const schema = Yup.object().shape({
       name: Yup.string().required(),
