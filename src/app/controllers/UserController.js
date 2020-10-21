@@ -3,8 +3,7 @@ import User from '../models/User';
 
 class UserController {
   async update(req, res) {
-    console.log(req.userId);
-    return res.json({ ok: true });
+    return res.json({ userId: req.userId });
   }
 
   async store(req, res) {

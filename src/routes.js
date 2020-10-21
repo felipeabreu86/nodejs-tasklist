@@ -11,7 +11,7 @@ routes.post('/users', UserController.store);
 // Session Controller
 routes.post('/sessions', SessionController.store);
 
-// Todas rotas abaixo desse middleware precisa estar autenticado
+// Todas rotas abaixo desse middleware precisam estar autenticadas
 routes.use(authMiddleware);
 routes.put('/users', UserController.update);
 // Se eu quisesse passar o middleware individualmente para cada rota, poderia usar assim:
